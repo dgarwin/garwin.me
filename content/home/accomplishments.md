@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 50  # Order that this section will appear.
 
-title = "Accomplish&shy;ments"
+title = "Selected Coursework"
 subtitle = ""
 
 # Date format
@@ -19,33 +19,44 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
-  organization = "Coursera"
-  organization_url = "https://www.coursera.org"
-  title = "Neural Networks and Deep Learning"
-  url = ""
-  certificate_url = "https://www.coursera.org"
-  date_start = "2018-10-01"
+  organization = "New York University"
+  organization_url = "https://www.nyu.edu"
+  title = "DS-GA 1008: Deep Learning"
+  certificate_url = ""
+  url = "https://cilvr.nyu.edu/doku.php?id=courses:deeplearning2015:start"
+  date_start = "2015-02-01"
   date_end = ""
-  description = ""
+  description = "Introductory graduate course in deep learning taught by Yann LeCun"
 
 [[item]]
-  organization = "edX"
-  organization_url = "https://www.edx.org"
-  title = "Blockchain Fundamentals"
-  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
-  certificate_url = "https://www.edx.org"
-  date_start = "2018-03-01"
-  date_end = ""
-  description = "Formulated informed blockchain models, hypotheses, and use cases."
-  
-[[item]]
-  organization = "DataCamp"
-  organization_url = "https://www.datacamp.com"
-  title = "Object-Oriented Programming in R: S3 and R6 Course"
+  organization = "New York University"
+  organization_url = "https://www.nyu.edu"
+  title = "CS-GA 6673: Neural Network Computing"
   url = ""
-  certificate_url = "https://www.datacamp.com"
-  date_start = "2017-07-01"
-  date_end = "2017-12-21"
-  description = ""
+  certificate_url = ""
+  date_start = "2014-09-01"
+  date_end = ""
+  description = "Graduate course in classic neural network architectures and applications"
+
+[[item]]
+  organization = "New York University"
+  organization_url = "https://www.nyu.edu"
+  title = "CS-GA 6932: Machine Learning"
+  url = ""
+  certificate_url = ""
+  date_start = "2015-02-01"
+  date_end = ""
+  description = "Graduate theory course in machine learning"
+
+[[item]]
+  organization = "Udacity"
+  organization_url = "https://www.udacity.com"
+  title = "Machine Learning Nanodegree"
+  url = "https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t"
+  certificate_url = ""
+  date_start = "2016-07-01"
+  date_end = "2016-10-01"
+  description = "Survey course in modern techniques for applied machine learning"
+
 
 +++

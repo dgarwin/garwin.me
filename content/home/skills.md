@@ -15,21 +15,39 @@ subtitle = ""
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
 
 [[feature]]
-  icon = "r-project"
+  icon = "python"
   icon_pack = "fab"
-  name = "R"
-  description = "90%"
+  name = "Python"
+  description = "Since 2013"
   
+[[feature]]
+  icon = "js"
+  icon_pack = "fab"
+  name = "Javascript"
+  description = "Since 2014"  
+  
+[[feature]]
+  icon = "server"
+  icon_pack = "fas"
+  name = "C# ASP.NET"
+  description = "Since 2014"
+
+[[feature]]
+  icon = "code"
+  icon_pack = "fas"
+  name = "Software Development"
+  description = "Since 2011"
+
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
-  name = "Statistics"
-  description = "100%"  
-  
+  name = "Machine Learning"
+  description = "Since 2013"  
+
 [[feature]]
-  icon = "camera-retro"
+  icon = "walking"
   icon_pack = "fas"
-  name = "Photography"
-  description = "10%"
+  name = "Dancing"
+  description = "Since 2019"  
 
 +++

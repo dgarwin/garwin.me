@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 130  # Order that this section will appear.
 
 title = "Contact"
-subtitle = ""
+subtitle = "Please feel free to reach out for consulting requests or connect with me directly on LinkedIn!"
 
 # Automatically link email and phone?
 autolink = true
