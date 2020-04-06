@@ -20,15 +20,15 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Software Engineer Consultant"
-  company = "Autonomous Healthcare"
-  company_url = "http://www.autonomoushealthcare.com/"
-  location = "New Jersey"
+  company = "Self Employed"
+  company_url = ""
+  location = "New York"
   date_start = "2016-05-01"
   date_end = ""
   description = """
   Responsibilities include:
   
-  * Software architecture design and implementation
+  * Software architecture design, development, and maintenance
   * Software prototyping and feasibility analysis
   * Software development team management and project planning
   """
@@ -58,7 +58,8 @@ date_format = "Jan 2006"
   description = """
   Responsibilities include:
   
-  * Microservice API development and maintenance
+  * Software development and maintenance
+  * Software development standards creation
   """
 
 [[experience]]
@@ -74,7 +75,6 @@ date_format = "Jan 2006"
   * Software architecture design, development, and maintenance
   * Software development team management and project planning
   * Software development standards creation
-  * Software developer hiring
   """
 
 [[experience]]
