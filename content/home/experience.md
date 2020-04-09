@@ -31,6 +31,8 @@ date_format = "Jan 2006"
   * Software architecture design, development, and maintenance
   * Software prototyping and feasibility analysis
   * Software development team management and project planning
+
+  Core Technologies: Python, Javascript, Nodejs, AWS, React
   """
 
 [[experience]]
@@ -46,6 +48,8 @@ date_format = "Jan 2006"
   * Health data exploration
   * Software architecture design
   * Machine learning model design
+
+  Core Technologies: Python
   """
 
 [[experience]]
@@ -60,6 +64,8 @@ date_format = "Jan 2006"
   
   * Software development and maintenance
   * Software development standards creation
+
+  Core Technologies: Javascript, Nodejs, Docker, MySQL, Couchbase
   """
 
 [[experience]]
@@ -75,6 +81,8 @@ date_format = "Jan 2006"
   * Software architecture design, development, and maintenance
   * Software development team management and project planning
   * Software development standards creation
+  
+  Core Technologies: C#, ASP.NET, MSSQL, Javascript, React, Redux
   """
 
 [[experience]]
@@ -90,6 +98,46 @@ date_format = "Jan 2006"
   * Health data exploration
   * Data collection tool design and development
   * Machine learning model design
+  
+  Core Technologies: Matlab, C#
+  """
+
+[[experience]]
+  title = "Co-Founder"
+  company = "StartCamp"
+  company_url = ""
+  location = "New York"
+  date_start = "2018-10-13"
+  date_end = "2019-06-13"
+  description = """
+  StartCamp's Mission: 
+  * To create software development as a feasible career opportunity for incarcerated youth.
+
+  Responsibilities include:
+  
+  * Co-creating the customized coding curriculum for incarcerated youth
+  * Managing corporate finances and regulations adherence
+  * Finding, vetting, and training teachers and miscellaneous volunteers
+  
+  """
+
+[[experience]]
+  title = "Volunteer Teacher"
+  company = "CodeNation"
+  company_url = "https://codenation.org/"
+  location = "New York"
+  date_start = "2017-09-13"
+  date_end = "2019-06-13"
+  description = """
+  StartCamp's Mission: 
+  * To create software development as a feasible career opportunity for incarcerated youth.
+
+  Responsibilities include:
+  
+  * Teaching HTML, CSS, Javascript with a team of co-teachers
+  * Creating and delivering personalized improvement plans for students.
+  * Adapted pre-existing lessons plans for each class of students
+  
   """
 
 +++

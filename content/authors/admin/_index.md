@@ -10,20 +10,21 @@ authors:
 superuser: true
 
 # Role/position
-role: Software Engineer Consultant
+role: Software Engineer and Data Scientist
 
 # Organizations/Affiliations
 organizations:
-- name: Autonomous Healthcare
+- name: 
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
 bio: My professional interests include healthcare automation, biofeedback systems, online education platforms, and developer productivity optimization.
 
 interests:
-- Healthcare automation
-- Biofeedback systems
-- Online education platforms
+- Healthcare
+- Education
+- Social equity
+- Social dancing
 
 education:
   courses:
@@ -62,8 +63,10 @@ user_groups:
 - Visitors
 ---
 
-David Garwin is currently a Research Engineer at Autonomous Healthcare and freelance Software Engineer Consultant. 
+David Garwin is currently a part-time Research Engineer at Autonomous Healthcare. 
 
-He has experience in machine learning research and software engineering in healthcare, finance, and education industries. 
+He has experience with machine learning research and software engineering in healthcare, finance, and education industries. 
 
-He is currently open to consulting opportunities with medicine, education, and non-profits.
+In his spare time, he enjoys dancing (and watching) West Coast Swing, reading well researched literature, and travelling to new places.
+
+He is currently open to part-time software engineering and data science consulting opportunities.
