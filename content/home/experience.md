@@ -129,9 +129,6 @@ date_format = "Jan 2006"
   date_start = "2017-09-13"
   date_end = "2019-06-13"
   description = """
-  StartCamp's Mission: 
-  * To create software development as a feasible career opportunity for incarcerated youth.
-
   Responsibilities include:
   
   * Teaching HTML, CSS, Javascript with a team of co-teachers
