@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   company_url = ""
   location = "New York"
   date_start = "2016-05-01"
-  date_end = ""
+  date_end = "2020-08-01"
   description = """
   Responsibilities include:
   
@@ -36,12 +36,27 @@ date_format = "Jan 2006"
   """
 
 [[experience]]
+  title = "Software Development Engineer"
+  company = "Amazon Web Services"
+  company_url = "https://aws.amazon.com/transit-gateway/"
+  location = "Virginia"
+  date_start = "2020-08-17"
+  date_end = ""
+  description = """
+  Responsibilities include:
+  
+  * Contributing to all aspects of the SDLC for the AWS Transit Gateway team.
+
+  Core Technologies: Scala
+  """
+
+[[experience]]
   title = "Research Engineer"
   company = "Autonomous Healthcare"
   company_url = "http://www.autonomoushealthcare.com/"
   location = "New Jersey"
   date_start = "2019-10-16"
-  date_end = ""
+  date_end = "2020-08-01"
   description = """
   Responsibilities include:
   
