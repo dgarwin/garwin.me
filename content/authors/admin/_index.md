@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My professional interests include healthcare automation, biofeedback systems, online education platforms, and developer productivity optimization.
+bio: My professional interests include web infrastructure, healthcare, and education.
 
 interests:
 - Healthcare
@@ -63,10 +63,8 @@ user_groups:
 - Visitors
 ---
 
-David Garwin is currently a part-time Research Engineer at Autonomous Healthcare. 
+David Garwin is currently a full-time Software Development Engineer at Amazon Web Services. 
 
 He has experience with machine learning research and software engineering in healthcare, finance, and education industries. 
 
 In his spare time, he enjoys dancing (and watching) West Coast Swing, reading well researched literature, and travelling to new places.
-
-He is currently open to part-time software engineering and data science consulting opportunities.
