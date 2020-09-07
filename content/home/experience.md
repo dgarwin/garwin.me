@@ -88,8 +88,8 @@ date_format = "Jan 2006"
   company = "New York University"
   company_url = "http://www.nyu.edu/"
   location = "New York"
-  date_start = "2018-12-13"
-  date_end = "2014-11-01"
+  date_start = "2014-11-01"
+  date_end = "2018-12-13"
   description = """
   Responsibilities include:
   
