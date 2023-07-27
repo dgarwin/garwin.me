@@ -36,18 +36,35 @@ date_format = "Jan 2006"
   """
 
 [[experience]]
-  title = "Software Development Engineer"
+  title = "Software Development Engineer II"
   company = "Amazon Web Services"
   company_url = "https://aws.amazon.com/transit-gateway/"
   location = "Virginia"
   date_start = "2020-08-17"
+  date_end = "2023-05-21"
+  description = """
+  Responsibilities include:
+
+  * Built integration testing framework for Transit Gateway Control Plane, increasing accuracy, coverage, and ease of development. 
+  * Built multi region testing framework for Transit Gateway Cross Region Peering Data Plane. 
+  * Developed APIs and async jobs in Scala for multiple feature launches (CloudWAN, TGW Connect, IGMP Multicast, TGW Flow Logs)
+
+  Core Technologies: Scala
+  """
+
+[[experience]]
+  title = "Senior Software Engineer"
+  company = "Reddit"
+  company_url = "https://www.reddit.com/"
+  location = "Maryland"
+  date_start = "2023-06-26"
   date_end = ""
   description = """
   Responsibilities include:
   
-  * Contributing to all aspects of the SDLC for the AWS Transit Gateway team.
+  * Building and implementing solutions on the Privacy team.
 
-  Core Technologies: Scala
+  Core Technologies: Python, Go
   """
 
 [[experience]]
