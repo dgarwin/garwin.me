@@ -60,7 +60,7 @@ user_groups:
 - Visitors
 ---
 
-David Garwin is currently a full-time Senior Software Development Engineer at Reddit working on Privacy and Security services. 
+David Garwin is currently a full-time Senior Software Engineer at Reddit working on Privacy and Security services. 
 
 He has engineering experience in numerous industries including: higher education, biotech, finance, cloud infrastructure, and social media.
 
