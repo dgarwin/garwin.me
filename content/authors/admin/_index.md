@@ -63,8 +63,10 @@ user_groups:
 - Visitors
 ---
 
-David Garwin is currently a full-time Software Development Engineer at Amazon Web Services. 
+David Garwin is currently a full-time Senior Software Development Engineer at Reddit working on Privacy and Security services. 
 
-He has experience with machine learning research and software engineering in healthcare, finance, and education industries. 
+He has engineering experience in numerous industries including: higher education, biotech, finance, cloud infrastructure, and social media.
 
-In his spare time, he enjoys dancing (and watching) West Coast Swing, reading well researched literature, and travelling to new places.
+In his spare time, he enjoys dancing West Coast Swing (and is looking for more hobbies).
+
+
