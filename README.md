@@ -3,10 +3,11 @@
 A plain personal site. No framework, no JavaScript, nothing to compile.
 
 - `index.html` — the whole site (markup plus a small embedded stylesheet)
-- `oh-no/index.html` — a period-accurate 1997 version of the same content, served at
-  `/oh-no/`. HTML 3.2 and CSS1 only: table layout, `<font>`, `<center>`, body color
-  attributes, no images and no JavaScript. Nothing in it postdates 1997, so don't
-  "fix" it with flexbox, media queries, or `max-width`.
+- `oh-no/index.html` — a 1997-styled version of the same content, served at `/oh-no/`.
+  The look is deliberate (black ground, Impact orange, cyan links, yellow header
+  bands, outset borders, a starfield of asterisks) but the layout underneath is
+  modern: grid, flexbox, and a media query, so it stacks on a phone. Still no images
+  and no JavaScript. Keep the styling; the layout is fair game.
 - `CNAME` — custom domain (vestigial: from GitHub Pages, unused by Netlify)
 - `netlify.toml` — Netlify deploy config
 
