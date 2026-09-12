@@ -1,8 +1,11 @@
-# Static site — no build step. Files are served straight from the repo root.
+# Static site — there is nothing to compile. The "build" just stages the site
+# files into public/.
 #
-# `command` is set explicitly (not just omitted): Netlify falls back to the
-# build command configured in the site UI for any key this file leaves out,
-# and the UI may still hold the old `hugo --gc --minify` command.
+# Why stage into public/ instead of publishing the repo root: this site's
+# Netlify UI still has Publish directory = "public" from when the site was
+# built with Hugo, and the deploy stage honors that even when netlify.toml
+# resolves publish to the repo root. Producing public/ satisfies both, so the
+# deploy works without depending on a UI setting.
 [build]
-  command = "echo 'Static site - nothing to build.'"
-  publish = "."
+  command = "mkdir -p public && cp index.html david.jpg CNAME public/"
+  publish = "public"
