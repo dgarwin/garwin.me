@@ -4,7 +4,6 @@ A plain, single-page personal site. No framework, no JavaScript, nothing to
 compile.
 
 - `index.html` — the whole site (markup plus a small embedded stylesheet)
-- `david.jpg` — the photo
 - `CNAME` — custom domain (vestigial: from GitHub Pages, unused by Netlify)
 - `netlify.toml` — Netlify deploy config
 
@@ -33,5 +32,4 @@ site.
 
 ## Editing it
 
-Edit `index.html` directly. To replace the photo, overwrite `david.jpg` with a
-square image (the page renders it at 110px, so ~480px square is plenty).
+Edit `index.html` directly.
