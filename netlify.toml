@@ -14,5 +14,5 @@
 # landed, so a staging mistake fails the build loudly instead of publishing an
 # empty directory, and lists what shipped into the deploy log.
 [build]
-  command = 'mkdir -p public && find . -maxdepth 1 -type f ! -name ".*" ! -name "netlify.toml" ! -name "README.md" -exec cp {} public/ \; && test -f public/index.html && ls -l public/'
+  command = 'mkdir -p public && find . -maxdepth 1 ! -name "." ! -name ".*" ! -name "public" ! -name "netlify.toml" ! -name "README.md" -exec cp -r {} public/ \; && test -f public/index.html && ls -l public/'
   publish = "public"
