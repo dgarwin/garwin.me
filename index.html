@@ -33,6 +33,15 @@
   a:visited { color: #ff77ff; }
   a:hover { background: #00ffff; color: #000; }
 
+  .topbar {
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
   .stars {
     color: #333366;
     font-size: 13px;
@@ -132,7 +141,6 @@
   .tech { display: block; margin-top: 10px; color: #00ff00; font-weight: bold; }
 
   footer { margin-top: 26px; font-size: 13px; }
-  .credit { color: #aaa; font-size: 13px; }
   .updated { color: #888; font-size: 12px; }
 
   /* ---- phones: unwind the ring, stack every row ---- */
@@ -163,6 +171,12 @@
 <body>
 
 <div class="page">
+
+  <p class="topbar">
+    <a href="/plain/">plain version</a>
+    &nbsp;|&nbsp;
+    inspired by <a href="https://www.spacejam.com/1996/">Space&nbsp;Jam</a>
+  </p>
 
   <p class="stars" aria-hidden="true">* . &nbsp; * &nbsp;&nbsp; . * &nbsp; . &nbsp;&nbsp;&nbsp; * . &nbsp; * . &nbsp;&nbsp; * &nbsp; . * &nbsp;&nbsp;&nbsp; . *</p>
 
@@ -331,11 +345,6 @@
   <footer>
     <p>
       <a href="mailto:david@garwin.me">david@garwin.me</a>
-      &nbsp;|&nbsp;
-      <a href="/plain/">plain version</a>
-    </p>
-    <p class="credit">
-      Inspired by <a href="https://www.spacejam.com/1996/">Space Jam</a>.
     </p>
     <p class="updated">Last updated 12 September 2026</p>
     <p class="stars" aria-hidden="true">* . &nbsp; * &nbsp;&nbsp; . * &nbsp; . &nbsp;&nbsp;&nbsp; * . &nbsp; * .</p>
