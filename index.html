@@ -4,188 +4,344 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>David Garwin</title>
-<meta name="description" content="David Garwin — software engineer. Privacy and security at Reddit.">
+<meta name="description" content="David Garwin, software engineer. Privacy and security at Reddit.">
 <style>
-  :root {
-    --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #5c5c5c;
-    --rule: #e2e2e2;
-    --link: #14507d;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #161616;
-      --fg: #e8e8e8;
-      --muted: #a0a0a0;
-      --rule: #333333;
-      --link: #7fb7e0;
-    }
-  }
+  /* 1997 styling, modern layout. The look is deliberate: black ground, Impact
+     orange, cyan links, yellow header bands, outset borders. The layout
+     underneath is grid and flexbox so it stacks on a phone. */
+
+  * { box-sizing: border-box; }
 
   body {
-    background: var(--bg);
-    color: var(--fg);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    max-width: 40rem;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .page {
+    max-width: 620px;
     margin: 0 auto;
-    padding: 3rem 1.25rem 4rem;
+    padding-block: 24px 40px;
+    padding-inline: 16px;
+    text-align: center;
   }
 
-  a { color: var(--link); }
-  h1, h2 { line-height: 1.25; }
-  h1 { font-size: 1.75rem; margin: 0 0 .25rem; }
-  h2 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: .07em;
-    margin: 2.5rem 0 1rem;
-    padding-bottom: .4rem;
-    border-bottom: 1px solid var(--rule);
+  a { color: #00ffff; }
+  a:visited { color: #ff77ff; }
+  a:hover { background: #00ffff; color: #000; }
+
+  .stars {
+    color: #333366;
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
   }
-  p { margin: 0 0 1rem; }
 
-  .role { color: var(--muted); margin: 0; }
+  /* ---- the ring of links, Space Jam fashion ---- */
+  .ring {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas:
+      ".    top     ."
+      "left name    right"
+      ".    role    ."
+      ".    bottom  .";
+    align-items: center;
+    gap: 14px 10px;
+    margin-block: 18px;
+  }
+  .ring nav { display: flex; flex-direction: column; gap: 12px; }
+  .ring a { font-weight: bold; text-decoration: underline; }
 
-  .links { margin: 1.5rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; }
+  .ring-top    { grid-area: top; }
+  .ring-left   { grid-area: left; }
+  .ring-right  { grid-area: right; }
+  .ring-bottom { grid-area: bottom; }
 
-  .job { margin-bottom: 1.5rem; }
-  .job h3 { font-size: 1rem; margin: 0; font-weight: 600; }
-  .job .meta { color: var(--muted); font-size: .9rem; margin: .1rem 0 .35rem; }
-  .job p { margin: 0; }
-  .tech { color: var(--muted); font-size: .9rem; }
+  h1 {
+    grid-area: name;
+    margin: 0;
+    color: #ff6600;
+    font-family: Impact, "Arial Black", Helvetica, sans-serif;
+    font-size: clamp(2.1rem, 13vw, 3.2rem);
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+  .role {
+    grid-area: role;
+    margin: 0;
+    color: #00ff00;
+    font-size: 14px;
+    font-weight: bold;
+  }
 
-  ul.plain { margin: 0; padding-left: 1.2rem; }
-  ul.plain li { margin-bottom: .35rem; }
+  hr {
+    border: 0;
+    border-top: 6px solid #666;
+    margin-block: 20px;
+  }
 
-  footer {
-    margin-top: 3rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--rule);
-    color: var(--muted);
-    font-size: .9rem;
+  /* ---- the blue chiselled box ---- */
+  .about {
+    background: #000099;
+    border: 4px outset #ccc;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+  }
+  .about p { margin: 0 0 10px; }
+  .about p:last-child { margin-bottom: 0; }
+
+  /* ---- sections ---- */
+  section { margin-top: 28px; border: 2px solid #555; }
+  .band {
+    margin: 0;
+    background: #ffff00;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    padding: 5px;
+  }
+
+  .entry {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    border-top: 2px solid #555;
+    text-align: left;
+  }
+  .who {
+    background: #1a1a1a;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .who b { display: block; color: #fff; }
+  .who span { color: #aaa; }
+  .what {
+    background: #111;
+    color: #ccc;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .tech { display: block; margin-top: 10px; color: #00ff00; font-weight: bold; }
+
+  footer { margin-top: 26px; font-size: 13px; }
+  .credit { color: #aaa; font-size: 13px; }
+  .updated { color: #888; font-size: 12px; }
+
+  /* ---- phones: unwind the ring, stack every row ---- */
+  @media (max-width: 560px) {
+    .ring {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "name"
+        "role"
+        "top"
+        "left"
+        "right"
+        "bottom";
+      gap: 10px;
+    }
+    .ring nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 20px;
+    }
+    .entry { grid-template-columns: 1fr; }
+    .what { border-top: 1px dashed #444; }
+    .stars { letter-spacing: 0.3em; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>David Garwin</h1>
-  <p class="role">Senior Software Engineer &middot; Maryland</p>
-</header>
+<div class="page">
 
-<ul class="links">
-  <li><a href="mailto:david@garwin.me">david@garwin.me</a></li>
-  <li><a href="https://github.com/dgarwin">GitHub</a></li>
-  <li><a href="https://www.linkedin.com/in/dgarwin/">LinkedIn</a></li>
-</ul>
+  <p class="stars" aria-hidden="true">* . &nbsp; * &nbsp;&nbsp; . * &nbsp; . &nbsp;&nbsp;&nbsp; * . &nbsp; * . &nbsp;&nbsp; * &nbsp; . * &nbsp;&nbsp;&nbsp; . *</p>
 
-<h2>About</h2>
-<p>
-  I'm a Senior Software Engineer at Reddit, working on privacy and security services.
-  I've built software across higher education, biotech, finance, cloud infrastructure,
-  and social media.
-</p>
-<p>
-  P.S. I also like to
-  <a href="https://www.youtube.com/channel/UCHyWtgAfjaJepz5YV8W1EVA">dance</a>.
-</p>
+  <header class="ring">
+    <h1>DAVID<br>GARWIN</h1>
+    <p class="role">SENIOR SOFTWARE ENGINEER<br>MARYLAND</p>
+    <nav class="ring-top"><a href="#experience">EXPERIENCE</a></nav>
+    <nav class="ring-left">
+      <a href="https://github.com/dgarwin">GITHUB</a>
+      <a href="mailto:david@garwin.me">EMAIL</a>
+    </nav>
+    <nav class="ring-right">
+      <a href="https://www.linkedin.com/in/dgarwin/">LINKEDIN</a>
+      <a href="https://mentorcruise.com/mentor/davidgarwin/">MENTORING</a>
+    </nav>
+    <nav class="ring-bottom"><a href="#other">OTHER</a></nav>
+  </header>
 
-<h2>Experience</h2>
+  <p class="stars" aria-hidden="true">. &nbsp;&nbsp; * . &nbsp;&nbsp;&nbsp; * &nbsp; . * &nbsp;&nbsp; . &nbsp; * . &nbsp;&nbsp; * &nbsp; . &nbsp;&nbsp;&nbsp; * .</p>
 
-<div class="job">
-  <h3>Senior Software Engineer &mdash; <a href="https://www.reddit.com/">Reddit</a></h3>
-  <p class="meta">Jun 2023 &ndash; Present &middot; Maryland</p>
-  <p>Building and implementing solutions on the Privacy team.</p>
-  <p class="tech">Python, Go</p>
+  <hr>
+
+  <div class="about">
+    <p>
+      I'm a Senior Software Engineer at <a href="https://www.reddit.com/">Reddit</a>,
+      working on privacy and security services. I've built software across higher
+      education, biotech, finance, cloud infrastructure, and social media.
+    </p>
+    <p>
+      P.S. I also like to
+      <a href="https://www.youtube.com/channel/UCHyWtgAfjaJepz5YV8W1EVA">dance</a>.
+    </p>
+  </div>
+
+  <section id="experience">
+    <h2 class="band">EXPERIENCE</h2>
+
+    <div class="entry">
+      <div class="who">
+        <b>Senior Software Engineer</b>
+        <a href="https://www.reddit.com/">Reddit</a>
+        <span><br>Jun 2023 &ndash; Present<br>Maryland</span>
+      </div>
+      <div class="what">
+        Building and implementing solutions on the Privacy team.
+        <span class="tech">Python, Go</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="who">
+        <b>Software Development Engineer II</b>
+        <a href="https://aws.amazon.com/transit-gateway/">Amazon Web Services</a>
+        <span><br>Aug 2020 &ndash; May 2023<br>Virginia</span>
+      </div>
+      <div class="what">
+        Worked on the Transit Gateway control plane team. Developed APIs and async jobs
+        for feature launches including Cloud WAN, TGW Connect, IGMP multicast, and TGW
+        flow logs.
+        <span class="tech">Scala</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="who">
+        <b>Research Engineer</b>
+        <a href="http://www.autonomoushealthcare.com/">Autonomous Healthcare</a>
+        <span><br>Oct 2019 &ndash; Aug 2020<br>New Jersey</span>
+      </div>
+      <div class="what">
+        Explored health data and designed both the software architecture and the machine
+        learning models.
+        <span class="tech">Python</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="who">
+        <b>Software Engineer</b>
+        <a href="http://www.lifion.com/">Lifion</a>
+        <span><br>Dec 2018 &ndash; Aug 2019<br>New York</span>
+      </div>
+      <div class="what">
+        Developed and maintained software, and created development standards for the team.
+        <span class="tech">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="who">
+        <b>Systems Architect, Software Engineer, Programmer Analyst</b>
+        <a href="http://www.nyu.edu/">New York University</a>
+        <span><br>Nov 2014 &ndash; Dec 2018<br>New York</span>
+      </div>
+      <div class="what">
+        Designed, developed, and maintained software architecture. Managed the team,
+        planned projects, and created development standards.
+        <span class="tech">C#, React</span>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="who">
+        <b>Machine Learning Intern</b>
+        AreteX Engineering
+        <span><br>Nov 2013 &ndash; Nov 2014<br>New York</span>
+      </div>
+      <div class="what">
+        Explored health data, built data collection tooling, and designed machine
+        learning models.
+        <span class="tech">MATLAB, C#</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="other">
+    <h2 class="band">OTHER</h2>
+
+    <div class="entry">
+      <div class="who">
+        <b>Software Mentor and Coach</b>
+        <a href="https://mentorcruise.com/mentor/davidgarwin/">MentorCruise</a>
+        <span><br>2021 &ndash; Present<br>Top 9% of mentors</span>
+      </div>
+      <div class="what">
+        I mentor and coach software engineers one-on-one &mdash; career growth, interview
+        preparation, and system design.
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="who">
+        <b>Co-Founder</b>
+        StartCamp
+        <span><br>Oct 2018 &ndash; Jun 2019<br>New York</span>
+      </div>
+      <div class="what">
+        Started a company working out of Horizons Juvenile Detention, teaching
+        incarcerated youth to code.
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="who">
+        <b>Volunteer Teacher</b>
+        <a href="https://codenation.org/">CodeNation</a>
+        <span><br>Sep 2017 &ndash; Jun 2019<br>New York</span>
+      </div>
+      <div class="what">
+        Taught HTML, CSS, and JavaScript with a team of co-teachers, adapting lesson
+        plans and writing personalized improvement plans for students.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="band">EDUCATION</h2>
+    <div class="entry">
+      <div class="who"><b>B.S. Computer Science and Applied Physics</b></div>
+      <div class="what"><a href="http://www.nyu.edu/">New York University</a>, 2015</div>
+    </div>
+  </section>
+
+  <hr>
+
+  <footer>
+    <p>
+      <a href="mailto:david@garwin.me">david@garwin.me</a>
+      &nbsp;|&nbsp;
+      <a href="/plain/">plain version</a>
+    </p>
+    <p class="credit">
+      Inspired by <a href="https://www.spacejam.com/1996/">Space Jam</a>.
+    </p>
+    <p class="updated">Last updated 12 September 2026</p>
+    <p class="stars" aria-hidden="true">* . &nbsp; * &nbsp;&nbsp; . * &nbsp; . &nbsp;&nbsp;&nbsp; * . &nbsp; * .</p>
+  </footer>
+
 </div>
-
-<div class="job">
-  <h3>Software Development Engineer II &mdash; <a href="https://aws.amazon.com/transit-gateway/">Amazon Web Services</a></h3>
-  <p class="meta">Aug 2020 &ndash; May 2023 &middot; Virginia</p>
-  <p>
-    Worked on the Transit Gateway control plane team. Developed APIs and async jobs for
-    feature launches including Cloud WAN, TGW Connect, IGMP multicast, and TGW flow logs.
-  </p>
-  <p class="tech">Scala</p>
-</div>
-
-<div class="job">
-  <h3>Research Engineer &mdash; <a href="http://www.autonomoushealthcare.com/">Autonomous Healthcare</a></h3>
-  <p class="meta">Oct 2019 &ndash; Aug 2020 &middot; New Jersey</p>
-  <p>
-    Explored health data and designed both the software architecture and the machine
-    learning models.
-  </p>
-  <p class="tech">Python</p>
-</div>
-
-<div class="job">
-  <h3>Software Engineer &mdash; <a href="http://www.lifion.com/">Lifion</a></h3>
-  <p class="meta">Dec 2018 &ndash; Aug 2019 &middot; New York</p>
-  <p>
-    Developed and maintained software, and created development standards for the team.
-  </p>
-  <p class="tech">JavaScript</p>
-</div>
-
-<div class="job">
-  <h3>Systems Architect, Software Engineer, Programmer Analyst &mdash; <a href="http://www.nyu.edu/">New York University</a></h3>
-  <p class="meta">Nov 2014 &ndash; Dec 2018 &middot; New York</p>
-  <p>
-    Designed, developed, and maintained software architecture. Managed the team, planned
-    projects, and created development standards.
-  </p>
-  <p class="tech">C#, React</p>
-</div>
-
-<div class="job">
-  <h3>Machine Learning Engineer &mdash; AreteX Engineering</h3>
-  <p class="meta">Nov 2013 &ndash; Nov 2014 &middot; New York</p>
-  <p>
-    Explored health data, built data collection tooling, and designed machine learning
-    models.
-  </p>
-  <p class="tech">MATLAB, C#</p>
-</div>
-
-<h2>Other</h2>
-
-<div class="job">
-  <h3>Software Mentor and Coach &mdash; <a href="https://mentorcruise.com/mentor/davidgarwin/">MentorCruise</a></h3>
-  <p class="meta">2021 &ndash; Present &middot; Top 9% of mentors on MentorCruise</p>
-  <p>
-    I mentor and coach software engineers one-on-one &mdash; career growth, interview
-    preparation, and system design.
-  </p>
-</div>
-
-<div class="job">
-  <h3>Co-Founder &mdash; StartCamp</h3>
-  <p class="meta">Oct 2018 &ndash; Jun 2019 &middot; New York</p>
-  <p>
-    Started a company working out of Horizons Juvenile Detention, teaching incarcerated
-    youth to code.
-  </p>
-</div>
-
-<div class="job">
-  <h3>Volunteer Teacher &mdash; <a href="https://codenation.org/">CodeNation</a></h3>
-  <p class="meta">Sep 2017 &ndash; Jun 2019 &middot; New York</p>
-  <p>
-    Taught HTML, CSS, and JavaScript with a team of co-teachers, adapting lesson plans and
-    writing personalized improvement plans for students.
-  </p>
-</div>
-
-<h2>Education</h2>
-<ul class="plain">
-  <li>BS in Computer Science and Applied Physics, New York University, 2015</li>
-</ul>
-
-<footer>
-  <p>Reach me at <a href="mailto:david@garwin.me">david@garwin.me</a>.</p>
-</footer>
 
 </body>
 </html>

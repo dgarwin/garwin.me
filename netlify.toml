@@ -16,3 +16,9 @@
 [build]
   command = 'mkdir -p public && find . -maxdepth 1 ! -name "." ! -name ".*" ! -name "public" ! -name "netlify.toml" ! -name "README.md" -exec cp -r {} public/ \; && test -f public/index.html && ls -l public/'
   publish = "public"
+
+# /oh-no/ was this page's address before it became the homepage.
+[[redirects]]
+  from = "/oh-no/*"
+  to = "/"
+  status = 301
