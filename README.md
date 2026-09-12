@@ -1,9 +1,12 @@
 # garwin.me
 
-A plain, single-page personal site. No framework, no JavaScript, nothing to
-compile.
+A plain personal site. No framework, no JavaScript, nothing to compile.
 
 - `index.html` — the whole site (markup plus a small embedded stylesheet)
+- `oh-no/index.html` — a period-accurate 1997 version of the same content, served at
+  `/oh-no/`. HTML 3.2 and CSS1 only: table layout, `<font>`, `<center>`, body color
+  attributes, no images and no JavaScript. Nothing in it postdates 1997, so don't
+  "fix" it with flexbox, media queries, or `max-width`.
 - `CNAME` — custom domain (vestigial: from GitHub Pages, unused by Netlify)
 - `netlify.toml` — Netlify deploy config
 
@@ -20,7 +23,8 @@ Then visit http://localhost:8000.
 ## Deploying
 
 Netlify serves the site. There is nothing to compile, but the build command
-copies `index.html` and `CNAME` into `public/` and publishes that,
+copies `index.html`, `CNAME`, and the `oh-no/` directory into `public/` and publishes
+that,
 because the Netlify UI for this site still has Publish directory = `public` left
 over from when the site used Hugo. If you clear that UI setting to `.`, the
 staging step can be dropped and the repo root published directly.
