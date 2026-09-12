@@ -7,5 +7,5 @@
 # resolves publish to the repo root. Producing public/ satisfies both, so the
 # deploy works without depending on a UI setting.
 [build]
-  command = "mkdir -p public && cp index.html david.jpg CNAME public/"
+  command = "mkdir -p public && cp index.html CNAME public/"
   publish = "public"
