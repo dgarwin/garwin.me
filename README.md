@@ -21,13 +21,15 @@ Then visit http://localhost:8000.
 ## Deploying
 
 Netlify serves the site. There is nothing to compile, but the build command
-copies `index.html`, `david.jpg`, and `CNAME` into `public/` and publishes that,
-because the Netlify UI for this site still has Publish directory = `public` left
-over from when the site used Hugo. If you clear that UI setting to `.`, the
-staging step can be dropped and the repo root published directly.
+stages the site files into `public/` and publishes that, because the Netlify UI
+for this site still has Publish directory = `public` left over from when the
+site used Hugo. If you clear that UI setting to `.`, the staging step can be
+dropped and the repo root published directly.
 
-**If you add a file to the site, add it to the copy list in `netlify.toml`** —
-otherwise it won't reach the deploy.
+The staging copies every top-level file except `netlify.toml`, `README.md`, and
+dotfiles, so adding a page or an image needs no config change. It asserts
+`index.html` landed, so a mistake fails the build instead of publishing an empty
+site.
 
 ## Editing it
 

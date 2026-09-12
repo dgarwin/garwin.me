@@ -1,11 +1,18 @@
-# Static site — there is nothing to compile. The "build" just stages the site
-# files into public/.
+# Static site — there is nothing to compile. The "build" stages the site files
+# into public/ and publishes that.
 #
-# Why stage into public/ instead of publishing the repo root: this site's
-# Netlify UI still has Publish directory = "public" from when the site was
-# built with Hugo, and the deploy stage honors that even when netlify.toml
-# resolves publish to the repo root. Producing public/ satisfies both, so the
-# deploy works without depending on a UI setting.
+# Why public/ and not the repo root: this site's Netlify UI still carries
+# Publish directory = "public" from when the site was built with Hugo, and the
+# deploy stage honors it even when netlify.toml resolves publish to the repo
+# root (a deploy failed with "Deploy directory 'public' does not exist" while
+# the resolved config showed /opt/build/repo). Producing public/ satisfies both
+# the UI value and this file, so the deploy does not depend on a setting the
+# repo cannot see.
+#
+# The staging copies every top-level site file rather than a named list, so
+# adding a page or an image needs no change here. It then asserts index.html
+# landed, so a staging mistake fails the build loudly instead of publishing an
+# empty directory, and lists what shipped into the deploy log.
 [build]
-  command = "mkdir -p public && cp index.html david.jpg CNAME public/"
+  command = 'mkdir -p public && find . -maxdepth 1 -type f ! -name ".*" ! -name "netlify.toml" ! -name "README.md" -exec cp {} public/ \; && test -f public/index.html && ls -l public/'
   publish = "public"
