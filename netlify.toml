@@ -1,3 +1,8 @@
 # Static site — no build step. Files are served straight from the repo root.
+#
+# `command` is set explicitly (not just omitted): Netlify falls back to the
+# build command configured in the site UI for any key this file leaves out,
+# and the UI may still hold the old `hugo --gc --minify` command.
 [build]
+  command = "echo 'Static site - nothing to build.'"
   publish = "."
