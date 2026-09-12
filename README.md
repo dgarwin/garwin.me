@@ -1,13 +1,15 @@
 # garwin.me
 
-A plain personal site. No framework, no JavaScript, nothing to compile.
+A personal site styled like it is 1997. No framework, no JavaScript, no images,
+nothing to compile.
 
-- `index.html` — the whole site (markup plus a small embedded stylesheet)
-- `oh-no/index.html` — a 1997-styled version of the same content, served at `/oh-no/`.
-  The look is deliberate (black ground, Impact orange, cyan links, yellow header
-  bands, outset borders, a starfield of asterisks) but the layout underneath is
-  modern: grid, flexbox, and a media query, so it stacks on a phone. Still no images
-  and no JavaScript. Keep the styling; the layout is fair game.
+- `index.html` — the site. 1997 styling on a modern layout: the look is deliberate
+  (black ground, Impact orange, cyan links, yellow header bands, outset borders, a
+  starfield of asterisks) but the layout underneath is grid, flexbox, and a media
+  query, so it stacks on a phone. No images and no JavaScript. Keep the styling; the
+  layout is fair game.
+- `plain/index.html` — the earlier minimal version of the same content, kept at
+  `/plain/` and linked from the footer.
 - `CNAME` — custom domain (vestigial: from GitHub Pages, unused by Netlify)
 - `netlify.toml` — Netlify deploy config
 
