@@ -4,6 +4,3 @@
 
 # OS
 .DS_Store
-
-# Netlify build output
-public/
